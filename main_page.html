@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <title> Array Operations </title>
+        <style>
+            p {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 1vw;
+            }
+            textarea {
+                resize: none;
+                height: 20vh;
+                width: 20vw;
+            }
+            @media screen and (max-width: 600px) {
+                p {
+                    font-size: 6;
+                }
+                textarea {
+                    width: 120px;
+                }
+            }
+            @media screen and (max-height: 600px) {
+                textarea {
+                    height: 120px;
+                }
+            }
+        </style>
+        <script src="main_script.js"></script>
+    </head>
+    <body>
+        <form>
+            <p> Enter array of numbers separated line by line: </p>
+            <textarea id = "inputarea"></textarea>
+            <p> Select operation: </p>
+            <select id="operations" name="operations">
+                <option value = "sumoper"> Sum </option>
+                <option value = "muloper"> Multiplication </option>
+                <option value = "minoper"> Minimum </option>
+                <option value = "maxoper"> Maximum </option>
+                <option value = "gcdoper"> GCD </option>
+            </select>
+            <button type="button" onclick="calculateAnswer()"> Calculate </button>
+        </form>
+        <p style="font-weight: bold;"> Response: </p>
+        <p id="response"></p>
+    </body>
+</html>
